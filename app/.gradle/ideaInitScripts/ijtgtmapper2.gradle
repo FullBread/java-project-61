@@ -1,0 +1,5 @@
+ext.pathMapper = [:]
+ext.pathMapper.put('//wsl\$/Ubuntu/home/fullbread/.jdks/corretto-17.0.6/bin/java', '/home/fullbread/.jdks/corretto-17.0.6/bin/java')
+ext.pathMapper.put('//wsl\$/Ubuntu/home/fullbread/app', '/home/fullbread/app')
+ext.pathMapper.put("<<target java executable path>>", '/home/fullbread/.jdks/corretto-17.0.6/bin/java')
+ext.mapPath = { path -> pathMapper.get(path) ?: path }
