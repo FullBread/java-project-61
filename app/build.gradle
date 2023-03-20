@@ -1,6 +1,7 @@
 plugins {
     id 'java'
     id "com.github.ben-manes.versions" version "0.46.0"
+    id 'application'
 }
 
 group 'hexlet.code'
@@ -8,6 +9,9 @@ version '1.0-SNAPSHOT'
 
 repositories {
     mavenCentral()
+}
+compileJava {
+    options.release = 17
 }
 
 dependencies {
@@ -17,4 +21,7 @@ dependencies {
 
 test {
     useJUnitPlatform()
+}
+application {
+    mainClass = 'hexlet.code.App'
 }
