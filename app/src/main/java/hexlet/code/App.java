@@ -11,6 +11,7 @@ public class App {
         Scanner userAnswer = new Scanner(System.in);
         System.out.println("""
                 Please enter the game number and press Enter.
+                1 - Greet
                 1 - Even
                 2 - Calc
                 3 - GCD
@@ -20,10 +21,11 @@ public class App {
         int answer = userAnswer.nextInt();
         switch (answer) {
             case 0 -> System.out.println("Goodbye :(");
-            case 1 -> Even.even();
-            case 2 -> Calc.calc();
-            case 3 -> GCD.gcd();
-            case 4 -> Progression.progression();
+            case 1 -> Engine.greetings();
+            case 2 -> Even.even();
+            case 3 -> Calc.calc();
+            case 4 -> GCD.gcd();
+            case 5 -> Progression.progression();
             default -> System.out.println("You entered an invalid value, let's try again.");
         }
     }
