@@ -20,7 +20,7 @@ public class Progression {
             progressionArray[i] = "";
             for (var j = 0; j < length; j++) {
                 if (j == missing) {
-                    progressionArray[i] = progressionArray[i] + " .. ";
+                    progressionArray[i] = progressionArray[i] + " ..";
                 } else {
                     progressionArray[i] = progressionArray[i] + " " + (firstNumber + step * j);
                 }
