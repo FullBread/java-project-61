@@ -14,7 +14,7 @@ public class Progression {
         String[] answerArray = new String[3];
         for (var i = 0; i < 3; i++) {
             var firstNumber = random.nextInt(26);
-            var length = random.nextInt(5, 11);
+            var length = random.nextInt(6, 11);
             var missing = random.nextInt(2, 5);
             var step = random.nextInt(2, 30);
             progressionArray[i] = "";
