@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Engine {
     private static final int COUNT_OF_QUESTIONS = 3;
     private static final int COUNT_OF_ANSWERS = 3;
-    static String userName = "";
+    private static String userName = "";
 
     public static void greetings() {
         Scanner answer = new Scanner(System.in);
