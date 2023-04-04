@@ -7,21 +7,26 @@ public class Engine {
     private static final int COUNT_OF_ANSWERS = 3;
     private static String userName = "";
 
-    public static void greetings() {
+//    public static void greetings() {
+//        Scanner answer = new Scanner(System.in);
+//        System.out.println("Welcome to the Brain Games!");
+//        System.out.print("May I have your name? ");
+//        userName = answer.next();
+//        System.out.println("Hello, " + userName + "!");
+//    }
+    public static void correctOrNot(String gameRules, String[][] questionAndAnswer) {
         Scanner answer = new Scanner(System.in);
         System.out.println("Welcome to the Brain Games!");
         System.out.print("May I have your name? ");
         userName = answer.next();
         System.out.println("Hello, " + userName + "!");
-    }
-    public static void correctOrNot(String[] question, String[] correctAnswer) {
+        System.out.print(gameRules);
         var count = 0;
         for (var i = 0; i < COUNT_OF_QUESTIONS; i++) {
-            Scanner answer = new Scanner(System.in);
-            System.out.println("Question: " + question[i]);
+            System.out.println("Question: " + questionAndAnswer[i][0]);
             String userAnswer = answer.next();
             System.out.println("Your answer: " + userAnswer);
-            if (correctAnswer[i].equals(userAnswer)) {
+            if (questionAndAnswer[i][0].equals(userAnswer)) {
                 System.out.println("Correct!");
                 count += 1;
                 if (count == COUNT_OF_ANSWERS) {
@@ -29,7 +34,7 @@ public class Engine {
                 }
             } else {
                 System.out.printf("'%s' is wrong answer ;(. Correct answer was '%s'."
-                        + "\n Let's try again, %s!", userAnswer, correctAnswer[i], userName);
+                        + "\n Let's try again, %s!", userAnswer, questionAndAnswer[i][1], userName);
                 break;
             }
         }

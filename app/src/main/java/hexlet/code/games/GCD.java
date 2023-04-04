@@ -10,22 +10,20 @@ public class GCD {
     private static final int COUNT_OF_QUESTIONS = 3;
 
     public static void gcd() {
-        Engine.greetings();
-        System.out.println("Find the greatest common divisor of given numbers.");
+        String gameRules = "Find the greatest common divisor of given numbers.";
         Random random = new Random();
-        String[] gcdArray = new String[COUNT_OF_QUESTIONS];
-        String[] answerArray = new String[COUNT_OF_QUESTIONS];
+        String[][] gcdArray = new String[COUNT_OF_QUESTIONS][2];
         for (var i = 0; i < COUNT_OF_QUESTIONS; i++) {
             var numberOne = random.nextInt(LOWER_BOUND, UPPER_BOUND);
             var numberTwo = random.nextInt(LOWER_BOUND, UPPER_BOUND);
-            gcdArray[i] = numberOne + " " + numberTwo;
+            gcdArray[i][0] = numberOne + " " + numberTwo;
             while (numberTwo != 0) {
                 int temp = numberTwo;
                 numberTwo = numberOne % numberTwo;
                 numberOne = temp;
             }
-            answerArray[i] = String.valueOf(numberOne);
+            gcdArray[i][1] = String.valueOf(numberOne);
         }
-        Engine.correctOrNot(gcdArray, answerArray);
+        Engine.correctOrNot(gameRules, gcdArray);
     }
 }

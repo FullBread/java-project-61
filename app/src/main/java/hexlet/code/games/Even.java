@@ -11,19 +11,17 @@ public class Even {
 
     @SuppressWarnings("checkstyle:NeedBraces")
     public static void even() {
-        Engine.greetings();
-        System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
+        String gameRules = "Answer 'yes' if the number is even, otherwise answer 'no'.";
         Random random = new Random();
-        String[] evenArray = new String[COUNT_OF_QUESTIONS];
-        String[] answerEven = new String[COUNT_OF_QUESTIONS];
+        String[][] evenArray = new String[COUNT_OF_QUESTIONS][2];
         for (var i = 0; i < COUNT_OF_QUESTIONS; i++) {
-            evenArray[i] = String.valueOf(random.nextInt(UPPER_BOUND));
-            if (Integer.parseInt(evenArray[i]) % 2 == 0) {
-                answerEven[i] = "yes";
+            evenArray[i][0] = String.valueOf(random.nextInt(UPPER_BOUND));
+            if (Integer.parseInt(evenArray[i][0]) % 2 == 0) {
+                evenArray[i][1] = "yes";
             } else {
-                answerEven[i] = "no";
+                evenArray[i][1] = "no";
             }
         }
-        Engine.correctOrNot(evenArray, answerEven);
+        Engine.correctOrNot(gameRules, evenArray);
     }
 }

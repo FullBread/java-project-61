@@ -16,26 +16,24 @@ public class Progression {
 
 
     public static void progression() {
-        Engine.greetings();
-        System.out.println("What number is missing in the progression?");
+        String gameRules = "What number is missing in the progression?";
         Random random = new Random();
-        String[] progressionArray = new String[COUNT_OF_QUESTIONS];
-        String[] answerArray = new String[COUNT_OF_QUESTIONS];
+        String[][] progressionArray = new String[COUNT_OF_QUESTIONS][2];
         for (var i = 0; i < COUNT_OF_QUESTIONS; i++) {
             var firstNumber = random.nextInt(FIRST_NUMBER_UPPER_BOUND);
             var length = random.nextInt(LENGTH_LOWER_BOUND, LENGTH_UPPER_BOUND);
             var missing = random.nextInt(MISSING_NUMBER_LOWER_BOUND, MISSING_NUMBER_UPPER_BOUND);
             var step = random.nextInt(STEP_LOWER_BOUND, STEP_UPPER_BOUND);
-            progressionArray[i] = "";
+            progressionArray[i][0] = "";
             for (var j = 0; j < length; j++) {
                 if (j == missing) {
-                    progressionArray[i] = progressionArray[i] + ".. ";
+                    progressionArray[i][0] = progressionArray[i][0] + ".. ";
                 } else {
-                    progressionArray[i] = progressionArray[i] + (firstNumber + step * j) + " ";
+                    progressionArray[i][0] = progressionArray[i][0] + (firstNumber + step * j) + " ";
                 }
             }
-            answerArray[i] = String.valueOf(firstNumber + (step * missing));
+            progressionArray[i][1] = String.valueOf(firstNumber + (step * missing));
         }
-        Engine.correctOrNot(progressionArray, answerArray);
+        Engine.correctOrNot(gameRules, progressionArray);
     }
 }

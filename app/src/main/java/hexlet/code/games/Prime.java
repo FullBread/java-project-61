@@ -10,19 +10,17 @@ public class Prime {
     private static final int UPPER_BOUND = 120;
 
     public static void prime() {
-        Engine.greetings();
-        System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
+        String gameRules = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
         Random random = new Random();
-        String[] primeArray = new String[COUNT_OF_QUESTIONS];
-        String[] answerArray = new String[COUNT_OF_QUESTIONS];
+        String[][] primeArray = new String[COUNT_OF_QUESTIONS][2];
         for (var i = 0; i < COUNT_OF_QUESTIONS; i++) {
-            primeArray[i] = String.valueOf(random.nextInt(UPPER_BOUND));
-            if (Primes.isPrime(Integer.parseInt(primeArray[i]))) {
-                answerArray[i] = "yes";
+            primeArray[i][0] = String.valueOf(random.nextInt(UPPER_BOUND));
+            if (Primes.isPrime(Integer.parseInt(primeArray[i][0]))) {
+                primeArray[i][1] = "yes";
             } else {
-                answerArray[i] = "no";
+                primeArray[i][1] = "no";
             }
         }
-        Engine.correctOrNot(primeArray, answerArray);
+        Engine.correctOrNot(gameRules, primeArray);
     }
 }
