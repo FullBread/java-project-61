@@ -16,11 +16,8 @@ public class Even {
         String[][] evenArray = new String[COUNT_OF_QUESTIONS][2];
         for (var i = 0; i < COUNT_OF_QUESTIONS; i++) {
             evenArray[i][0] = String.valueOf(random.nextInt(UPPER_BOUND));
-            if (Integer.parseInt(evenArray[i][0]) % 2 == 0) {
-                evenArray[i][1] = "yes";
-            } else {
-                evenArray[i][1] = "no";
-            }
+            boolean evenOrNot = Integer.parseInt(evenArray[i][0]) % 2 == 0;
+            evenArray[i][1] = (evenOrNot) ? "yes" : "no";
         }
         Engine.correctOrNot(gameRules, evenArray);
     }
