@@ -19,7 +19,7 @@ public class Engine {
             System.out.println("Question: " + questionAndAnswer[i][0]);
             String userAnswer = answer.next();
             System.out.println("Your answer: " + userAnswer);
-            if (questionAndAnswer[i][0].equals(userAnswer)) {
+            if (questionAndAnswer[i][1].equals(userAnswer)) {
                 System.out.println("Correct!");
                 count += 1;
                 if (count == COUNT_OF_ANSWERS) {
