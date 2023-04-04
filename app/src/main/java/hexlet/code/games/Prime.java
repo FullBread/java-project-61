@@ -15,11 +15,8 @@ public class Prime {
         String[][] primeArray = new String[COUNT_OF_QUESTIONS][2];
         for (var i = 0; i < COUNT_OF_QUESTIONS; i++) {
             primeArray[i][0] = String.valueOf(random.nextInt(UPPER_BOUND));
-            if (Primes.isPrime(Integer.parseInt(primeArray[i][0]))) {
-                primeArray[i][1] = "yes";
-            } else {
-                primeArray[i][1] = "no";
-            }
+            boolean prime = Primes.isPrime(Integer.parseInt(primeArray[i][0]));
+            primeArray[i][1] = (prime) ? "yes" : "no";
         }
         Engine.play(gameRules, primeArray);
     }

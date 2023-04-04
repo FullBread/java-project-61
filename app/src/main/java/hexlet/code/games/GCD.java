@@ -8,6 +8,7 @@ public class GCD {
     private static final int LOWER_BOUND = 40;
     private static final int UPPER_BOUND = 260;
     private static final int COUNT_OF_QUESTIONS = 3;
+
     private static String answerForGcd(int firstNumber, int secondNumber) {
         while (secondNumber != 0) {
             int temp = secondNumber;

@@ -22,17 +22,17 @@ public class Progression {
         for (var i = 0; i < COUNT_OF_QUESTIONS; i++) {
             var firstNumber = random.nextInt(FIRST_NUMBER_UPPER_BOUND);
             var length = random.nextInt(LENGTH_LOWER_BOUND, LENGTH_UPPER_BOUND);
-            var missing = random.nextInt(MISSING_NUMBER_LOWER_BOUND, MISSING_NUMBER_UPPER_BOUND);
+            var missingIndex = random.nextInt(MISSING_NUMBER_LOWER_BOUND, MISSING_NUMBER_UPPER_BOUND);
             var step = random.nextInt(STEP_LOWER_BOUND, STEP_UPPER_BOUND);
             progressionArray[i][0] = "";
             for (var j = 0; j < length; j++) {
-                if (j == missing) {
+                if (j == missingIndex) {
                     progressionArray[i][0] = progressionArray[i][0] + ".. ";
                 } else {
                     progressionArray[i][0] = progressionArray[i][0] + (firstNumber + step * j) + " ";
                 }
             }
-            progressionArray[i][1] = String.valueOf(firstNumber + (step * missing));
+            progressionArray[i][1] = String.valueOf(firstNumber + (step * missingIndex));
         }
         Engine.play(gameRules, progressionArray);
     }
