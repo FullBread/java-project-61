@@ -14,25 +14,27 @@ public class Calc {
         String gameRules = "What is the result of the expression?";
         Random random = new Random();
         String[][] calcArray = new String[COUNT_OF_QUESTIONS][2];
+        String[] operator = new String[]{"+", "-", "*"};
         for (var i = 0; i < COUNT_OF_QUESTIONS; i++) {
             var numberOne = random.nextInt(UPPER_BOUND_FIRST);
             var numberTwo = random.nextInt(UPPER_BOUND_SECOND);
-            var operator = random.nextInt(OPERATORS);
-            switch (operator) {
-                case 0 -> {
+            var index = random.nextInt(operator.length);
+            switch (operator[index]) {
+                case "+" -> {
                     calcArray[i][0] = numberOne + " + " + numberTwo;
                     calcArray[i][1] = String.valueOf(numberOne + numberTwo);
                 }
-                case 1 -> {
+                case "-" -> {
                     calcArray[i][0] = numberOne + " - " + numberTwo;
                     calcArray[i][1] = String.valueOf(numberOne - numberTwo);
                 }
-                default -> {
+                case "*" -> {
                     calcArray[i][0] = numberOne + " * " + numberTwo;
                     calcArray[i][1] = String.valueOf(numberOne * numberTwo);
                 }
+                default -> System.out.println("System.exit(0)");
             }
         }
-        Engine.correctOrNot(gameRules, calcArray);
+        Engine.play(gameRules, calcArray);
     }
 }

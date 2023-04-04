@@ -8,6 +8,14 @@ public class GCD {
     private static final int LOWER_BOUND = 40;
     private static final int UPPER_BOUND = 260;
     private static final int COUNT_OF_QUESTIONS = 3;
+    private static String answerForGcd(int firstNumber, int secondNumber) {
+        while (secondNumber != 0) {
+            int temp = secondNumber;
+            secondNumber = firstNumber % secondNumber;
+            firstNumber = temp;
+        }
+        return String.valueOf(firstNumber);
+    }
 
     public static void gcd() {
         String gameRules = "Find the greatest common divisor of given numbers.";
@@ -17,13 +25,8 @@ public class GCD {
             var numberOne = random.nextInt(LOWER_BOUND, UPPER_BOUND);
             var numberTwo = random.nextInt(LOWER_BOUND, UPPER_BOUND);
             gcdArray[i][0] = numberOne + " " + numberTwo;
-            while (numberTwo != 0) {
-                int temp = numberTwo;
-                numberTwo = numberOne % numberTwo;
-                numberOne = temp;
-            }
-            gcdArray[i][1] = String.valueOf(numberOne);
+            gcdArray[i][1] = answerForGcd(numberOne, numberTwo);
         }
-        Engine.correctOrNot(gameRules, gcdArray);
+        Engine.play(gameRules, gcdArray);
     }
 }

@@ -19,6 +19,6 @@ public class Even {
             boolean evenOrNot = Integer.parseInt(evenArray[i][0]) % 2 == 0;
             evenArray[i][1] = (evenOrNot) ? "yes" : "no";
         }
-        Engine.correctOrNot(gameRules, evenArray);
+        Engine.play(gameRules, evenArray);
     }
 }

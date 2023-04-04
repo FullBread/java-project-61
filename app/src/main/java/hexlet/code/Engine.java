@@ -7,14 +7,7 @@ public class Engine {
     private static final int COUNT_OF_ANSWERS = 3;
     private static String userName = "";
 
-//    public static void greetings() {
-//        Scanner answer = new Scanner(System.in);
-//        System.out.println("Welcome to the Brain Games!");
-//        System.out.print("May I have your name? ");
-//        userName = answer.next();
-//        System.out.println("Hello, " + userName + "!");
-//    }
-    public static void correctOrNot(String gameRules, String[][] questionAndAnswer) {
+    public static void play(String gameRules, String[][] questionAndAnswer) {
         Scanner answer = new Scanner(System.in);
         System.out.println("Welcome to the Brain Games!");
         System.out.print("May I have your name? ");

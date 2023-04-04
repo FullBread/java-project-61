@@ -21,6 +21,6 @@ public class Prime {
                 primeArray[i][1] = "no";
             }
         }
-        Engine.correctOrNot(gameRules, primeArray);
+        Engine.play(gameRules, primeArray);
     }
 }

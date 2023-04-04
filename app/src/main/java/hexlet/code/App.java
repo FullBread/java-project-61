@@ -29,7 +29,7 @@ public class App {
         int answer = userAnswer.nextInt();
         switch (answer) {
             case 0 -> System.out.println("Goodbye :(");
-            case USER_CHOICE_1 -> Engine.greetings();
+            case USER_CHOICE_1 -> Cli.greetings();
             case USER_CHOICE_2 -> Even.even();
             case USER_CHOICE_3 -> Calc.calc();
             case USER_CHOICE_4 -> GCD.gcd();

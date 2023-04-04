@@ -34,6 +34,6 @@ public class Progression {
             }
             progressionArray[i][1] = String.valueOf(firstNumber + (step * missing));
         }
-        Engine.correctOrNot(gameRules, progressionArray);
+        Engine.play(gameRules, progressionArray);
     }
 }
