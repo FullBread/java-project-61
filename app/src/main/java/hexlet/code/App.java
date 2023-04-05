@@ -8,12 +8,12 @@ import hexlet.code.games.Progression;
 
 import java.util.Scanner;
 public class App {
-    private static final int USER_CHOICE_1 = 1;
-    private static final int USER_CHOICE_2 = 2;
-    private static final int USER_CHOICE_3 = 3;
-    private static final int USER_CHOICE_4 = 4;
-    private static final int USER_CHOICE_5 = 5;
-    private static final int USER_CHOICE_6 = 6;
+    private static final int GREET = 1;
+    private static final int EVEN_GAME = 2;
+    private static final int CALC_GAME = 3;
+    private static final int GCD_GAME = 4;
+    private static final int PROGRESSION_GAME = 5;
+    private static final int PRIME_GAME = 6;
     public static void main(String[] args) {
         Scanner userAnswer = new Scanner(System.in);
         System.out.println("""
@@ -29,12 +29,12 @@ public class App {
         int answer = userAnswer.nextInt();
         switch (answer) {
             case 0 -> System.out.println("Goodbye :(");
-            case USER_CHOICE_1 -> Cli.greetings();
-            case USER_CHOICE_2 -> Even.even();
-            case USER_CHOICE_3 -> Calc.calc();
-            case USER_CHOICE_4 -> GCD.gcd();
-            case USER_CHOICE_5 -> Progression.progression();
-            case USER_CHOICE_6 -> Prime.prime();
+            case GREET -> Cli.greetings();
+            case EVEN_GAME -> Even.even();
+            case CALC_GAME -> Calc.calc();
+            case GCD_GAME -> GCD.gcd();
+            case PROGRESSION_GAME -> Progression.progression();
+            case PRIME_GAME -> Prime.prime();
             default -> System.out.println("You entered an invalid value, let's try again.");
         }
     }
