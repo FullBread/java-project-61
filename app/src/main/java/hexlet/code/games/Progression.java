@@ -29,10 +29,11 @@ public class Progression {
             StringBuilder question = new StringBuilder();
             for (var j = 0; j < length; j++) {
                 if (j == missingIndex) {
-                    question.append(".. ");
+                    progressionArray[i][0] = String.valueOf(question.append(".. "));
                 } else {
                     question.append((firstNumber + step * j));
                     question.append(" ");
+                    progressionArray[i][0] = String.valueOf(question);
                 }
             }
             progressionArray[i][1] = String.valueOf(firstNumber + (step * missingIndex));
