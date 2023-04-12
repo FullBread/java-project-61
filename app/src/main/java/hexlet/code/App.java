@@ -8,12 +8,14 @@ import hexlet.code.games.Progression;
 
 import java.util.Scanner;
 public class App {
+    private static final int EXIT = 0;
     private static final int GREET = 1;
     private static final int EVEN_GAME = 2;
     private static final int CALC_GAME = 3;
     private static final int GCD_GAME = 4;
     private static final int PROGRESSION_GAME = 5;
     private static final int PRIME_GAME = 6;
+
     public static void main(String[] args) {
         Scanner userAnswer = new Scanner(System.in);
         System.out.println("""
@@ -28,7 +30,7 @@ public class App {
         System.out.print("Your choice: ");
         int answer = userAnswer.nextInt();
         switch (answer) {
-            case 0 -> System.out.println("Goodbye :(");
+            case EXIT -> System.out.println("Goodbye :(");
             case GREET -> Cli.greetings();
             case EVEN_GAME -> Even.even();
             case CALC_GAME -> Calc.calc();
