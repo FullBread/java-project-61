@@ -31,7 +31,10 @@ public class Calc {
                     calcArray[i][0] = numberOne + " * " + numberTwo;
                     calcArray[i][1] = String.valueOf(numberOne * numberTwo);
                 }
-                default -> System.out.println("System.exit(0)");
+                default -> {
+                    System.out.println("Unknown operator " + OPERATOR[index]);
+                    System.exit(0);
+                }
             }
         }
         Engine.play(gameRules, calcArray);
