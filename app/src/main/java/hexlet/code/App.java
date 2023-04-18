@@ -32,12 +32,12 @@ public class App {
         switch (answer) {
             case EXIT -> System.out.println("Goodbye :(");
             case GREET -> Cli.greetings();
-            case EVEN_GAME -> Even.even();
-            case CALC_GAME -> Calc.calc();
-            case GCD_GAME -> GCD.gcd();
-            case PROGRESSION_GAME -> Progression.progression();
-            case PRIME_GAME -> Prime.prime();
-            default -> System.out.println("You entered an invalid value, let's try again.");
+            case EVEN_GAME -> Even.run();
+            case CALC_GAME -> Calc.run();
+            case GCD_GAME -> GCD.run();
+            case PROGRESSION_GAME -> Progression.run();
+            case PRIME_GAME -> Prime.run();
+            default -> System.out.println("You entered an invalid value.");
         }
     }
 }

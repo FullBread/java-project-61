@@ -10,7 +10,7 @@ public class Calc {
     private static final int UPPER_BOUND_SECOND = 26;
     private static final String[] OPERATOR = new String[]{"+", "-", "*"};
 
-    public static void calc() {
+    public static void run() {
         String gameRules = "What is the result of the expression?";
         Random random = new Random();
         String[][] calcArray = new String[COUNT_OF_QUESTIONS][2];

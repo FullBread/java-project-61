@@ -18,7 +18,7 @@ public class GCD {
         return String.valueOf(firstNumber);
     }
 
-    public static void gcd() {
+    public static void run() {
         String gameRules = "Find the greatest common divisor of given numbers.";
         Random random = new Random();
         String[][] gcdArray = new String[COUNT_OF_QUESTIONS][2];

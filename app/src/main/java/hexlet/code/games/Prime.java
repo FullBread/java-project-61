@@ -9,7 +9,7 @@ public class Prime {
     private static final int COUNT_OF_QUESTIONS = 3;
     private static final int UPPER_BOUND = 120;
 
-    public static void prime() {
+    public static void run() {
         String gameRules = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
         Random random = new Random();
         String[][] primeArray = new String[COUNT_OF_QUESTIONS][2];

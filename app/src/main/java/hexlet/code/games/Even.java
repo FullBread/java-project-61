@@ -12,7 +12,7 @@ public class Even {
         return number % 2 == 0;
     }
 
-    public static void even() {
+    public static void run() {
         String gameRules = "Answer 'yes' if the number is even, otherwise answer 'no'.";
         Random random = new Random();
         String[][] evenArray = new String[COUNT_OF_QUESTIONS][2];

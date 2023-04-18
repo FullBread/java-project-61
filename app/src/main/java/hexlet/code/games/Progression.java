@@ -15,7 +15,7 @@ public class Progression {
     private static final int STEP_UPPER_BOUND = 30;
 
 
-    public static void progression() {
+    public static void run() {
         String gameRules = "What number is missing in the progression?";
         Random random = new Random();
 
@@ -27,16 +27,6 @@ public class Progression {
             var step = random.nextInt(STEP_LOWER_BOUND, STEP_UPPER_BOUND);
             progressionArray[i][0] = "";
             StringBuilder question = new StringBuilder();
-//            for (var j = 0; j < length; j++) {
-//                if (j == missingIndex) {
-//                    progressionArray[i][0] = String.valueOf(question.append(".. "));
-//                } else {
-//                    question.append((firstNumber + step * j));
-//                    question.append(" ");
-//                    progressionArray[i][0] = String.valueOf(question);
-//                }
-//            }
-//            progressionArray[i][1] = String.valueOf(firstNumber + (step * missingIndex));
             for (var j = 0; j < length; j++) {
                 if (j == missingIndex) {
                     question.append("..");
