@@ -1,6 +1,7 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
+import hexlet.code.Utils;
 
 public class Progression {
     private static final int COUNT_OF_QUESTIONS = 3;

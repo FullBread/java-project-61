@@ -2,6 +2,7 @@ package hexlet.code.games;
 
 import hexlet.code.Engine;
 
+import hexlet.code.Utils;
 import org.apache.commons.math3.primes.Primes;
 
 public class Prime {
@@ -14,7 +15,7 @@ public class Prime {
         for (var i = 0; i < COUNT_OF_QUESTIONS; i++) {
             var number = Utils.getRandomNumber(0, UPPER_BOUND);
             primeArray[i][0] = String.valueOf(number);
-            boolean prime = Primes.isPrime(Integer.parseInt(primeArray[i][0]));
+            boolean prime = Primes.isPrime(number);
             primeArray[i][1] = prime ? "yes" : "no";
         }
         Engine.play(gameRules, primeArray);
