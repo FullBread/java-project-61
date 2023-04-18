@@ -2,8 +2,6 @@ package hexlet.code.games;
 
 import hexlet.code.Engine;
 
-import java.util.Random;
-
 public class Progression {
     private static final int COUNT_OF_QUESTIONS = 3;
     private static final int FIRST_NUMBER_UPPER_BOUND = 26;
@@ -17,14 +15,12 @@ public class Progression {
 
     public static void run() {
         String gameRules = "What number is missing in the progression?";
-        Random random = new Random();
-
         String[][] progressionArray = new String[COUNT_OF_QUESTIONS][2];
         for (var i = 0; i < COUNT_OF_QUESTIONS; i++) {
-            var firstNumber = random.nextInt(FIRST_NUMBER_UPPER_BOUND);
-            var length = random.nextInt(LENGTH_LOWER_BOUND, LENGTH_UPPER_BOUND);
-            var missingIndex = random.nextInt(MISSING_NUMBER_LOWER_BOUND, MISSING_NUMBER_UPPER_BOUND);
-            var step = random.nextInt(STEP_LOWER_BOUND, STEP_UPPER_BOUND);
+            var firstNumber = Utils.getRandomNumber(0, FIRST_NUMBER_UPPER_BOUND);
+            var length = Utils.getRandomNumber(LENGTH_LOWER_BOUND, LENGTH_UPPER_BOUND);
+            var missingIndex = Utils.getRandomNumber(MISSING_NUMBER_LOWER_BOUND, MISSING_NUMBER_UPPER_BOUND);
+            var step = Utils.getRandomNumber(STEP_LOWER_BOUND, STEP_UPPER_BOUND);
             progressionArray[i][0] = "";
             StringBuilder question = new StringBuilder();
             for (var j = 0; j < length; j++) {
